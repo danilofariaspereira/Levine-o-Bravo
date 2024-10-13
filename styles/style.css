@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    /* vareaveis css*/
+    --cor-primaria:#000000;
+    --cor-secundaria:#f6f6f6;
+    --cor-terciaria: rgb(9, 128, 233);
+    --cor-quaternaria:chocolate ;
+    --fonte-primaria:"Krona One", sans-serif;
+    --fonte-secundaria:"Montserrat", sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   /*/*ocupa 100% da tela*/ /* quando se tem o futer ele nao e mais nessesario */
+
+    box-sizing: border-box; /* faz com que  nada autrapasse o body*/
+    background-color:var(--cor-primaria); /*usamos o var () pra chamar as variaveis que declaramos*/ 
+    color:var(--cor-secundaria);
+
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.menu{
+    display: flex;
+    gap: 80px;
+}
+
+.menu-link{
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    color:var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao{
+    margin: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*esparo cada elemento filho*/
+}
+.apresentacao-conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;  /* alinha os elementos em coluna */
+    gap: 40px; /*espassamento entre os elementos filhos */
+}
+.apresentacao-conteudo-titulo{
+    font-size: 36px;
+    font-family: var(--fonte-primaria);
+}
+
+strong{
+    color:var(--cor-terciaria);
+}
+
+.apresentacao-conteudo-texto{
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+}
+.apresentacao-links{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.links-subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 378px;
+    text-align:center ; /* alinhamento do texto */
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none ;/* sem nem uma decoraçao pra tirar aquela linha debaixo dos link */
+    color:var(--cor-quaternaria);
+    font-family: var(--fonte-secundaria);
+}
+.button:hover{
+    background-color:#272727 ;
+}
+
+.photo{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px;
+    }
+}
+.rodape{
+    padding:24px ;
+    margin-top: 8.2%;
+    color:var(--cor-primaria);
+    background-color:var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 24px;
+    font-weight: 400;
+}
